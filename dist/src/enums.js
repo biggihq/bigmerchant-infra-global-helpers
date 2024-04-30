@@ -1,0 +1,28 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportTimeRange = void 0;
+var ReportTimeRange;
+(function (ReportTimeRange) {
+    ReportTimeRange["TODAY"] = "today";
+    ReportTimeRange["YESTERDAY"] = "yesterday";
+    ReportTimeRange["THIS_WEEK"] = "this-week";
+    ReportTimeRange["LAST_WEEK"] = "last-week";
+    ReportTimeRange["THIS_MONTH"] = "this-month";
+    ReportTimeRange["LAST_MONTH"] = "last-month";
+    ReportTimeRange["THIS_QUARTER"] = "this-quarter";
+    ReportTimeRange["LAST_QUARTER"] = "last-quarter";
+    ReportTimeRange["THIS_YEAR"] = "this-year";
+    ReportTimeRange["LAST_YEAR"] = "last-year";
+    ReportTimeRange["JANUARY"] = "january";
+    ReportTimeRange["FEBRUARY"] = "february";
+    ReportTimeRange["MARCH"] = "march";
+    ReportTimeRange["APRIL"] = "april";
+    ReportTimeRange["MAY"] = "may";
+    ReportTimeRange["JUNE"] = "june";
+    ReportTimeRange["JULY"] = "july";
+    ReportTimeRange["AUGUST"] = "august";
+    ReportTimeRange["SEPTEMBER"] = "september";
+    ReportTimeRange["OCTOBER"] = "october";
+    ReportTimeRange["NOVEMBER"] = "november";
+    ReportTimeRange["DECEMBER"] = "december";
+})(ReportTimeRange || (exports.ReportTimeRange = ReportTimeRange = {}));

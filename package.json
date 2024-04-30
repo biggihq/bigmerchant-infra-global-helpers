@@ -1,0 +1,29 @@
+{
+  "name": "@bigmerchant-infra/global-helpers",
+  "version": "1.0.0",
+  "description": "Global functions on bigmerchant infra",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "author": "Joshua Nwafor",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "moment": "^2.30.1",
+    "undici-types": "^5.26.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biggihq/bigmerchant-infra-global-helpers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/biggihq/bigmerchant-infra-global-helpers/issues"
+  },
+  "homepage": "https://github.com/biggihq/bigmerchant-infra-global-helpers#readme"
+}
