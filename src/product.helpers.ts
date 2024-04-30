@@ -7,6 +7,7 @@ export const generateUniqueSku = (title: string, unit: string) => {
            .replace(/[  -]+/g, " ")  // Replace multiple spaces and hyphens with single spaces
            .split(/\s+/);             // Split on whitespace (including spaces, tabs, etc.)
 
+           
         // Extract characters, preserving numbers and handling short words
         return parts.map((el) => {
             if (!isNaN(parseInt(el))) {
