@@ -2,12 +2,12 @@ export const generateUniqueSku = (title: string, unit: string) => {
     const extractCharsFromProductTitle = (str: string): string => {
         // Normalize string and split into words efficiently
         const parts = str
-           .toLowerCase()
-           .trim()
-           .replace(/[  -]+/g, " ")  // Replace multiple spaces and hyphens with single spaces
-           .split(/\s+/);             // Split on whitespace (including spaces, tabs, etc.)
+            .toLowerCase()
+            .trim()
+            .replace(/[  -]+/g, " ")  // Replace multiple spaces and hyphens with single spaces
+            .split(/\s+/);             // Split on whitespace (including spaces, tabs, etc.)
 
-           
+
         // Extract characters, preserving numbers and handling short words
         return parts.map((el) => {
             if (!isNaN(parseInt(el))) {
@@ -36,3 +36,23 @@ export const generateUniqueSku = (title: string, unit: string) => {
     // For demonstration purposes, we'll just return the base SKU
     return baseSku // Replace with actual generated SKU
 };
+
+
+export const calculateProfitMargin = (costPrice: number, sellingPrice: number) => {
+    // Ensure that costPrice and sellingPrice are valid numbers
+    if (
+        typeof costPrice !== 'number' ||
+        typeof sellingPrice !== 'number' ||
+        isNaN(costPrice) ||
+        isNaN(sellingPrice)
+    ) {
+        return 'Invalid input. Please provide valid numbers.';
+    }
+
+    // Calculate the profit
+    let profit = sellingPrice - costPrice;
+
+    // Calculate the profit margin as a percentage
+    let profitMargin = ((profit / sellingPrice) * 100).toFixed(2); // Round to 2 decimal places
+    return profitMargin + '%';
+}

@@ -4,6 +4,8 @@ import * as ProductHelpers from "./product.helpers"
 import * as DateRangeHelpers from "./date_range.helper"
 import * as DateHelpers from "./date"
 import * as Statics from "./statics"
+export * from "./enums"
+
 const TimeInMilliseconds = Object.freeze({
     SECOND: 1000,
     MINUTE: 60 * 1000,

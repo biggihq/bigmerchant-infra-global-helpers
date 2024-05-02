@@ -1,57 +1,58 @@
 import { DateRange } from "./enums";
 
 const moment = require('moment');
-export function getReportDateRange(timeRange: DateRange): [Date, Date] {
+export function getReportDateRange(timeRange:  DateRange): [Date, Date] {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
+  
 
   switch (timeRange) {
-    case DateRange.YESTERDAY: {
+    case "yesterday": {
       const yesterdayStart = moment().subtract(1, 'day').startOf('day');
       const yesterdayEnd = moment().subtract(1, 'day').endOf('day');
       return [yesterdayStart.format(), yesterdayEnd.format()];
     }
 
-    case DateRange.TODAY: {
+    case "today": {
       const todayStart = moment().startOf('day');
       const todayEnd = moment().endOf('day');
       return [todayStart.format(), todayEnd.format()];
     }
 
-    case DateRange.THIS_WEEK: {
+    case "this-week": {
       const thisWeekStart = moment().startOf('week');
       const thisWeekEnd = moment().endOf('week');
       return [thisWeekStart.format(), thisWeekEnd.format()];
     }
 
-    case DateRange.LAST_WEEK: {
+    case "last-week": {
       const lastWeekStart = moment().subtract(1, 'week').startOf('week');
       const lastWeekEnd = moment().subtract(1, 'week').endOf('week');
 
       return [lastWeekStart.format(), lastWeekEnd.format()];
     }
 
-    case DateRange.LAST_MONTH: {
+    case "last-month": {
       const lastMonthStart = moment().subtract(1, 'month').startOf('month');
       const lastMonthEnd = moment().subtract(1, 'month').endOf('month');
 
       return [lastMonthStart.format(), lastMonthEnd.format()];
     }
 
-    case DateRange.THIS_MONTH: {
+    case "this-month": {
       const thisMonthStart = moment().startOf('month');
       const thisMonthEnd = moment().endOf('month');
       return [thisMonthStart.format(), thisMonthEnd.format()];
     }
 
-    case DateRange.THIS_QUARTER: {
+    case "this-quarter": {
       const thisQuarterStart = moment().startOf('quarter');
       const thisQuarterEnd = moment().endOf('quarter');
 
       return [thisQuarterStart.format(), thisQuarterEnd.format()];
     }
 
-    case DateRange.LAST_QUARTER: {
+    case "last-quarter": {
       const lastQuarterStart = moment()
         .subtract(1, 'quarter')
         .startOf('quarter');
@@ -60,85 +61,81 @@ export function getReportDateRange(timeRange: DateRange): [Date, Date] {
       return [lastQuarterStart.format(), lastQuarterEnd.format()];
     }
 
-    case DateRange.THIS_YEAR: {
+    case "this-year": {
       const thisYearStart = moment().startOf('year');
       const thisYearEnd = moment().endOf('year');
       return [thisYearStart.format(), thisYearEnd.format()];
     }
 
-    case DateRange.LAST_YEAR: {
-      const lastYearStart = moment().subtract(1, 'year').startOf('year');
-      const lastYearEnd = moment().subtract(1, 'year').endOf('year');
-      return [lastYearStart.format(), lastYearEnd.format()];
-    }
+ 
 
-    case DateRange.JANUARY:
+    case 'january':
       return [
         moment().month(0).startOf('month').format(),
         moment().month(0).endOf('month').format(),
       ];
 
-    case DateRange.FEBRUARY:
+    case "february":
       return [
         moment().month(1).startOf('month').format(),
         moment().month(1).endOf('month').format(),
       ];
 
-    case DateRange.MARCH:
+    case "march":
       return [
         moment().month(2).startOf('month').format(),
         moment().month(2).endOf('month').format(),
       ];
 
-    case DateRange.APRIL:
+    case "april":
       return [
         moment().month(3).startOf('month').format(),
         moment().month(3).endOf('month').format(),
       ];
 
-    case DateRange.MAY:
+    case "may":
       return [
         moment().month(4).startOf('month').format(),
         moment().month(4).endOf('month').format(),
       ];
 
-    case DateRange.JUNE:
+    case "june":
       return [
         moment().month(5).startOf('month').format(),
         moment().month(5).endOf('month').format(),
       ];
 
-    case DateRange.JULY:
+    case "july":
       return [
         moment().month(6).startOf('month').format(),
         moment().month(6).endOf('month').format(),
       ];
 
-    case DateRange.AUGUST:
+    case "august":
       return [
         moment().month(7).startOf('month').format(),
         moment().month(7).endOf('month').format(),
       ];
 
-    case DateRange.SEPTEMBER:
+    case "september":
       return [
         moment().month(8).startOf('month').format(),
         moment().month(8).endOf('month').format(),
       ];
 
-    case DateRange.OCTOBER:
+    case "october":
       return [
         moment().month(9).startOf('month').format(),
         moment().month(9).endOf('month').format(),
       ];
 
-    case DateRange.NOVEMBER:
+    case "november":
       return [
         moment().month(10).startOf('month').format(),
         moment().month(10).endOf('month').format(),
       ];
 
-    case DateRange.DECEMBER:
+    case "december":
       return [
         moment().month(11).startOf('month').format(),
         moment().month(11).endOf('month').format(),

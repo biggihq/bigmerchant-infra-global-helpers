@@ -1,4 +1,7 @@
-export const SupportedCountries = [
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AcceptedMediaTypes = exports.ProductUnits = exports.BusinessCategories = exports.SupportedCountries = void 0;
+exports.SupportedCountries = [
     {
         name: 'Nigeria',
         currency: 'NGN',
@@ -6,8 +9,7 @@ export const SupportedCountries = [
         currency_symbol: '₦',
     },
 ];
-
-export const BusinessCategories = [
+exports.BusinessCategories = [
     {
         category: 'Retail Stores',
     },
@@ -57,12 +59,7 @@ export const BusinessCategories = [
         category: 'Others',
     },
 ];
-
-
-
-
-
-export const ProductUnits = [
+exports.ProductUnits = [
     'pc',
     'box',
     'pack',
@@ -84,12 +81,8 @@ export const ProductUnits = [
     'bottle',
     'plate',
     'carton',
-    'card',
-    'tab',
-    'sachet',
 ];
-
-export const AcceptedMediaTypes = [
+exports.AcceptedMediaTypes = [
     {
         ext: 'pdf',
         id: 'pdf',
@@ -101,15 +94,13 @@ export const AcceptedMediaTypes = [
         ext: 'docx',
         id: 'docx',
         name: 'Word Document',
-        contentType:
-            'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        contentType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     },
     {
         ext: 'xlsx',
         id: 'xlsx',
         name: 'Excel Document',
-        contentType:
-            'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        contentType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
     },
     {
         ext: 'ppt',

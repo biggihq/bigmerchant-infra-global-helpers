@@ -1,24 +1,19 @@
-export enum DateRange {
-    TODAY = 'today',
-    YESTERDAY = 'yesterday',
-    THIS_WEEK = 'this-week',
-    LAST_WEEK = 'last-week',
-    THIS_MONTH = 'this-month',
-    LAST_MONTH = 'last-month',
-    THIS_QUARTER = 'this-quarter',
-    LAST_QUARTER = 'last-quarter',
-    THIS_YEAR = 'this-year',
-    LAST_YEAR = 'last-year',
-    JANUARY = 'january',
-    FEBRUARY = 'february',
-    MARCH = 'march',
-    APRIL = 'april',
-    MAY = 'may',
-    JUNE = 'june',
-    JULY = 'july',
-    AUGUST = 'august',
-    SEPTEMBER = 'september',
-    OCTOBER = 'october',
-    NOVEMBER = 'november',
-    DECEMBER = 'december',
-}
+export type DateRange = 'today' | 'yesterday' | 'this-week' | 'last-week'
+    | 'this-month'
+    | 'last-month'
+    | 'this-quarter'
+    | 'last-quarter'
+    | 'this-year'
+    | 'last-year'
+    | 'january'
+    | 'february'
+    | 'march'
+    | 'april'
+    | 'may'
+    | 'june'
+    | 'july'
+    | 'august'
+    | 'september'
+    | 'october'
+    | 'november'
+    | 'december'
