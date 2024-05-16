@@ -4,6 +4,7 @@ import * as ProductHelpers from "./product.helpers"
 import * as DateRangeHelpers from "./date_range.helper"
 import * as DateHelpers from "./date"
 import * as Statics from "./statics"
+import * as FormHelpers from "./form.helpers"
 export * from "./enums"
 
 const TimeInMilliseconds = Object.freeze({
@@ -20,5 +21,5 @@ export {
     DateRangeHelpers,
     DateHelpers,
     TimeInMilliseconds,
-    Statics
+    Statics,FormHelpers
 }

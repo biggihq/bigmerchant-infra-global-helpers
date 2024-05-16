@@ -1,6 +1,6 @@
 export function formatCurrency(num: any, symbol = "₦") {
     // Check if the input is a valid number
-    if (isNaN(num)) {
+    if (Number.isNaN(num)) {
         return "Invalid input";
     }
     // Convert number to a string and split into integer and decimal parts

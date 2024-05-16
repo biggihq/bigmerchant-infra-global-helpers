@@ -81,6 +81,9 @@ exports.ProductUnits = [
     'bottle',
     'plate',
     'carton',
+    'card',
+    'tab',
+    'sachet',
 ];
 exports.AcceptedMediaTypes = [
     {

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateUniqueSku = void 0;
+exports.calculateProfitMargin = exports.generateUniqueSku = void 0;
 const generateUniqueSku = (title, unit) => {
     const extractCharsFromProductTitle = (str) => {
         // Normalize string and split into words efficiently
@@ -11,7 +11,7 @@ const generateUniqueSku = (title, unit) => {
             .split(/\s+/); // Split on whitespace (including spaces, tabs, etc.)
         // Extract characters, preserving numbers and handling short words
         return parts.map((el) => {
-            if (!isNaN(parseInt(el))) {
+            if (!Number.isNaN(parseInt(el))) {
                 // Number: Keep it as-is
                 return el;
             }
@@ -37,3 +37,18 @@ const generateUniqueSku = (title, unit) => {
     return baseSku; // Replace with actual generated SKU
 };
 exports.generateUniqueSku = generateUniqueSku;
+const calculateProfitMargin = (costPrice, sellingPrice) => {
+    // Ensure that costPrice and sellingPrice are valid numbers
+    if (typeof costPrice !== 'number' ||
+        typeof sellingPrice !== 'number' ||
+        Number.isNaN(costPrice) ||
+        Number.isNaN(sellingPrice)) {
+        return 'Invalid input. Please provide valid numbers.';
+    }
+    // Calculate the profit
+    let profit = sellingPrice - costPrice;
+    // Calculate the profit margin as a percentage
+    let profitMargin = ((profit / sellingPrice) * 100).toFixed(2); // Round to 2 decimal places
+    return profitMargin + '%';
+};
+exports.calculateProfitMargin = calculateProfitMargin;

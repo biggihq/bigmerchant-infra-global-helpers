@@ -10,7 +10,7 @@ export const generateUniqueSku = (title: string, unit: string) => {
 
         // Extract characters, preserving numbers and handling short words
         return parts.map((el) => {
-            if (!isNaN(parseInt(el))) {
+            if (!Number.isNaN(parseInt(el))) {
                 // Number: Keep it as-is
                 return el;
             } else if (el.length > 3) {
@@ -43,8 +43,8 @@ export const calculateProfitMargin = (costPrice: number, sellingPrice: number) =
     if (
         typeof costPrice !== 'number' ||
         typeof sellingPrice !== 'number' ||
-        isNaN(costPrice) ||
-        isNaN(sellingPrice)
+        Number.isNaN(costPrice) ||
+        Number.isNaN(sellingPrice)
     ) {
         return 'Invalid input. Please provide valid numbers.';
     }
