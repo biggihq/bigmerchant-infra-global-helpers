@@ -26,7 +26,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Statics = exports.TimeInMilliseconds = exports.DateHelpers = exports.DateRangeHelpers = exports.ProductHelpers = exports.CurrencyHelpers = exports.OrderHelpers = void 0;
+exports.FormHelpers = exports.Statics = exports.TimeInMilliseconds = exports.DateHelpers = exports.DateRangeHelpers = exports.ProductHelpers = exports.CurrencyHelpers = exports.OrderHelpers = void 0;
 const OrderHelpers = __importStar(require("./order.helpers"));
 exports.OrderHelpers = OrderHelpers;
 const CurrencyHelpers = __importStar(require("./currency"));
@@ -39,6 +39,8 @@ const DateHelpers = __importStar(require("./date"));
 exports.DateHelpers = DateHelpers;
 const Statics = __importStar(require("./statics"));
 exports.Statics = Statics;
+const FormHelpers = __importStar(require("./form.helpers"));
+exports.FormHelpers = FormHelpers;
 __exportStar(require("./enums"), exports);
 const TimeInMilliseconds = Object.freeze({
     SECOND: 1000,
