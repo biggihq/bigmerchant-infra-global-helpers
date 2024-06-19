@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.validatePositiveNumber = exports.validateOrderItems = exports.validatePurchaseItems = void 0;
+exports.validatePhone = exports.validateEmail = exports.validatePassword = exports.validatePositiveNumber = exports.validateOrderItems = exports.validatePurchaseItems = void 0;
 const validatePurchaseItems = (item) => {
     let errors = {};
     const quantityError = (0, exports.validatePositiveNumber)(item.quantity, 'Quantity', 1);
@@ -44,3 +44,33 @@ const validatePositiveNumber = (value, label, leastNumber) => {
     return undefined;
 };
 exports.validatePositiveNumber = validatePositiveNumber;
+const validatePassword = (value) => {
+    if (!value) {
+        return 'Password is required';
+    }
+    else if (value.length < 6) {
+        return 'Password must be at least 6 characters long';
+    }
+    return undefined;
+};
+exports.validatePassword = validatePassword;
+const validateEmail = (value) => {
+    if (!value) {
+        return 'Email is required';
+    }
+    else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
+        return 'Invalid email address';
+    }
+    return undefined;
+};
+exports.validateEmail = validateEmail;
+const validatePhone = (value) => {
+    if (!value) {
+        return 'Phone number is required';
+    }
+    else if (!/^\+?(\d.*){3,}$/.test(value)) {
+        return 'Invalid phone number';
+    }
+    return undefined;
+};
+exports.validatePhone = validatePhone;

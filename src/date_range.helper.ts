@@ -1,10 +1,10 @@
 import { DateRange } from "./enums";
 
 const moment = require('moment');
-export function getReportDateRange(timeRange:  DateRange): [Date, Date] {
+export function getReportDateRange(timeRange: DateRange): [Date, Date] {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-  
+
 
   switch (timeRange) {
     case "yesterday": {
@@ -67,7 +67,7 @@ export function getReportDateRange(timeRange:  DateRange): [Date, Date] {
       return [thisYearStart.format(), thisYearEnd.format()];
     }
 
- 
+
 
     case 'january':
       return [
