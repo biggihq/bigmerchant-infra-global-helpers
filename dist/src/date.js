@@ -6,6 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.DateUtils = void 0;
 const moment_1 = __importDefault(require("moment"));
 exports.DateUtils = {
+    TODAY_START_DATE: (0, moment_1.default)().startOf('day').toDate(),
+    TODAY_END_DATE: (0, moment_1.default)().endOf('day').toDate(),
+    WEEK_START_DATE: (0, moment_1.default)().startOf('week').toDate(),
+    WEEK_END_DATE: (0, moment_1.default)().endOf('week').toDate(),
     MONTH_START_DATE: (0, moment_1.default)().startOf('month').toDate(),
     MONTH_END_DATE: (0, moment_1.default)().endOf('month').toDate(),
     LAST_MONTH_START_DATE: (0, moment_1.default)().subtract(1, 'month').startOf('month').toDate(),
